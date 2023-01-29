@@ -1,0 +1,109 @@
+
+        //Inicia partida --> creo tableros --> coloco barcos --> disparaHumano --> compruebo...
+        
+
+        //Primero muestro el tablero y voy añadiendo barcos comprobando que sus posiciones 
+        //son validas suponiendo coloco un barco de tamaño 2, si la coordenada introducida 
+        //es [a][3] su segunda parte se colocara en funcion de la orientacion, si la 
+        //orientacion es vertical sera [b][3], si la orientacion es horizontal sera [a][4]
+        
+        
+        
+        ///////////
+        //PARTIDA//
+        ///////////
+        
+        //Metodo iniciar partida, el cual crea un objeto jugador, un objeto maquina, 
+        //2 objetos tablero, inicializa los tableros y empieza un bucle con los metodos 
+        //disparo y los metodos comprobar partida
+        
+        //Metodo comprobar partida que comprueba si hasGanado/hasPerdido,
+        //compreba que aun hay barcos que no estan hundidos 
+        //en el tablero del jugadro y en el tablero de la maquina
+        
+        //Al final de la partida se pregunta si quiere jugar otra
+        
+
+        ///////////
+        //TABLERO//    Agua: ░▒░▒░▒░▒░▒░▒ ≈≈   DisparoFallido: ◙○øØ  DisparoAcertado:♦X  BarcoHundido: ☼☼­≡≈¤¤¤*
+        ///////////    velero: V v   Fragata: FF ff     Buque: BBB bbb   Portaviones: PPPP pppp
+        
+        //Tiene un constructor del tablero 10x10
+        
+        //Tiene un metodo el cual muestra el tablero (si es el tablero del jugador 
+        //muestra la posicion de los barcos, si es el tablero de la maquina no)
+        //¿Como hacer que el metodo sepa de quien es el tablero? 
+        
+        //Tiene un metodo rellenar tablero, el cual en caso del jugador va preguntando 
+        //posicion y orientacion, en caso de maquina lo rellena de forma al azar
+        
+        //Metodo actualizar tablero, el cual despues de cada disparo cambia el tablero 
+        
+        ///////////
+        //JUGADOR//
+        ///////////
+        
+        
+        ///////////
+        //MAQUINA//
+        ///////////
+        
+        //Tiene un metodo que crea un objeto tablero
+        
+        //Tiene un metodo que coloca sus barcos de forma aleatoria a lo largo del tablero
+        //siguiendo las normas(que no se salga de los limites y que no esten adyacentes)
+        
+        //Tiene un metodo disparar, el cual dispara en un punto aleatorio del tablero, en caso de 
+        //disparar en un lugar el cual ya ha sido disparado, se dispara otra vez, en caso de acierto
+        //se dispara a un lugar cercano y no deja de disparar en lugares cercanos hasta que hunde el barco
+        //(Esto lo puedo hacer con un booleano "modo asesino" si esta activo, se va a una parte del metodo
+        //la cual esta enfocada solo a buscar un barco cerca de la ultima coordenada en la que disparo
+        
+        
+        
+        /////////////
+        //Excepcion//
+        /////////////
+        
+//      Se tiran simpre la misma excepcion pero el mensaje cambia segun el caso:
+//            Cuando se intenta colocar un barco en un lugar no valido (sobre otro barco, fuera del mapa, adyacente a un barco)
+//            Cuando se dispara a un lugar no valido (sobre otro disparo, fuera del mapa) 
+//            Cuando la coordenada no es valida (numero muy grande o pequeño o letras fueras del rango)
+
+
+
+        /////////
+        //Notas//
+        /////////
+
+        //Todos los metodos disparos son un try con un catch de la excepcion
+        
+        //Cuando se dispara en un lugar imposible o se introduce una coordenada no valida 
+        //(fuera de rango o en blanca) se hara un throw de una excepcion propia
+        
+        //Para muchos metodos de la maquina uso el Math.ramdom para generar un numero y 
+        //asi tomar decisiones aleatorias
+        
+        //Para comprobar que la coordenada es valida puedo primero comprobar si se 
+        //introdujeron solo 2 char, en caso de 1 o >=3 ya no es valida la coordenada, 
+        //luego: tener un char[]{A,B,C,D,E,F,G,H,I,J}; y ver si el array contiene la 
+        //primera letra introducida, luego un int[]{0,1,2,3,4,5,6,7,8,9} .toLowerCasse
+        //que comprueba si contiene el segundo char introducido
+        
+        //Cuando se dispara y se acierta el segundo disparo ya esta contemplado dentro del 
+        //metodo disparar, nada de llamar el metodo dos veces
+        
+        //Se comprueba la partida luego de cada metodo disparo en este orden: 
+        //disparoHumano, comprobar, disparoMaquina, comprobar, repetir.
+        //Esto para evitar empates
+        
+        
+        
+        
+        /////////
+        //Ideas//
+        /////////
+        
+        //Metodo comprobar disparo que comprueba si el dispsaro ha dado en el blanco
+        //Metodo actualizar tablaro que en caso que se lanza cuando el disparo ha tenido exito --> recibe el tipo de disparo, y actualiza la tabla con X o O dependiendo del resultado 
+        //Metodo que comprueba si despues de un disparo exitoso se ha hundido el barco
