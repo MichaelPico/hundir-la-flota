@@ -1,5 +1,6 @@
 # hundir-la-flota
 
+
 ### Descripcion
 
 Hundir la flota es un juego creado desde cero con el lenguage java, esta inspirado en el famoso juego hundir la flota, en este juego jugaras en contra de una maquina inteligente la cual es capaz de aprovechar las reglas del juego para optimizar sus disparos.
@@ -9,7 +10,9 @@ Hundir la flota es un juego creado desde cero con el lenguage java, esta inspira
 
 Para jugar este juego hace falta tener java instalado, ir a la seccion de release y descargar el jar, para ejecutar el jar hay que abrir la consola de comandos y usar el comando: java -jar "[ubicacion de el archivo ]"
 
+
 ### Caracteristicas y vista previa
+
 
 #### Inicio de el Juego y fase de colocacion de los barcos
 
@@ -19,12 +22,14 @@ En el juego el jugador empezara rellenando su tablero eligiendo coordenadas para
 
 Captura de pantalla "colocando barcos": https://imgur.com/qAWdUiS
 
+
 #### Fase de disparos
 
 Una vez el jugador crea su tablero tendra que selecionar casillas a las cuales disparar, a su vez cada vez que el jugador dispara la maquina disparara, ganara el primero en hundir todos los barcos de el otro.
 
 Captura de pantalla "disparo jugador": https://imgur.com/Z0UxUiy
 Captura de pantalla "disparo maquina": https://imgur.com/RQin7lc
+
 
 #### Explicacion de el disparo Inteligente de la maquina
 
