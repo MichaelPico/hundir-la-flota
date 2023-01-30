@@ -11,16 +11,22 @@ Para jugar este juego hace falta tener java instalado, ir a la seccion de releas
 
 ### Caracteristicas y vista previa
 
+#### Inicio de el Juego y fase de colocacion de los barcos
+
 Captura de la pantalla de inicio: https://imgur.com/mDJkndj
 
 En el juego el jugador empezara rellenando su tablero eligiendo coordenadas para sus barcos (4 veleros de tamaño 1, 3 fragatas de tamaño 2, 2 buques de tamaño 3 y un portaviones de tamaño 4) y decidiendo la orientacion de estos.
 
 Captura de pantalla "colocando barcos": https://imgur.com/qAWdUiS
 
+#### Fase de disparos
+
 Una vez el jugador crea su tablero tendra que selecionar casillas a las cuales disparar, a su vez cada vez que el jugador dispara la maquina disparara, ganara el primero en hundir todos los barcos de el otro.
 
 Captura de pantalla "disparo jugador": https://imgur.com/Z0UxUiy
 Captura de pantalla "disparo maquina": https://imgur.com/RQin7lc
+
+#### Explicacion de el disparo Inteligente de la maquina
 
 A su vez la maquina dispara de forma inteligente, al principio dispara a casillas aleatorias hasta encontrar un barco, una vez encuentra el barco disparar a casillas cercanas hasta hundirlo.
 
